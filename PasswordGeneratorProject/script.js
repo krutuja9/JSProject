@@ -147,9 +147,13 @@ copyBtn.addEventListener('click', () => {
 generateBtn.addEventListener('click', () => {
     //none of the checkbox are selected
 
-    if(checkCount == 0) 
-        return;
-
+    if(checkCount == 0){
+        document.querySelector('.alert').style.opacity = '1'
+    }
+    else{
+        document.querySelector('.alert').style.opacity = '0'
+    }
+        
     if(passwordLength < checkCount) {
         passwordLength = checkCount;
         handleSlider();
